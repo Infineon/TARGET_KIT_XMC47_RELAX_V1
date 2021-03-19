@@ -4,13 +4,13 @@
 * Description:
 * System configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.2.1.3335
-* xmclib 0.5.0.174
-* personalities 3.0.0.0
-* udd 3.0.0.788
+* Tools Package 2.3.0.3651
+* mtb-xmclib-cat3 3.0.0.276
+* personalities 5.0.0.0
+* udd 3.0.0.905
 *
 ********************************************************************************
-* Copyright 2020 Cypress Semiconductor Corporation
+* Copyright 2021 Cypress Semiconductor Corporation
 * SPDX-License-Identifier: Apache-2.0
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,23 +28,23 @@
 
 #include "cycfg_system.h"
 
-#define CLOCK_CCUCLK_ENABLED 1
-#define CLOCK_CCUCLK_DIV 1
-#define CLOCK_CPUCLK_DIV 1
+#define CLOCK_CCUCLK_ENABLED 1U
+#define CLOCK_CCUCLK_DIV 1U
+#define CLOCK_CPUCLK_DIV 1U
 #define CLOCK_FOFI_CALIBRATION_MODE XMC_SCU_CLOCK_FOFI_CALIBRATION_MODE_FACTORY
-#define CLOCK_OSCHP_ENABLED 1
+#define CLOCK_OSCHP_ENABLED 1U
 #define CLOCK_OSCHP_MODE XMC_SCU_CLOCK_OSCHP_MODE_OSC
-#define CLOCK_PERICLK_DIV 1
-#define CLOCK_SYSPLL_ENABLED 
+#define CLOCK_PERICLK_DIV 1U
+#define CLOCK_SYSPLL_ENABLED 1U
 #define CLOCK_SYSPLL_SEL XMC_SCU_CLOCK_SYSPLLCLKSRC_OSCHP
 #define CLOCK_SYSPLL_MODE XMC_SCU_CLOCK_SYSPLL_MODE_NORMAL
-#define CLOCK_SYSPLL_PDIV 1
-#define CLOCK_SYSPLL_NDIV 24
-#define CLOCK_SYSPLL_KDIV 1
+#define CLOCK_SYSPLL_PDIV 1U
+#define CLOCK_SYSPLL_NDIV 24U
+#define CLOCK_SYSPLL_KDIV 1U
 #define CLOCK_RTCCLK_SEL XMC_SCU_HIB_RTCCLKSRC_OSI
 #define CLOCK_STDBYCLK_SEL XMC_SCU_HIB_STDBYCLKSRC_OSI
 #define CLOCK_SYSCLK_SEL XMC_SCU_CLOCK_SYSCLKSRC_PLL
-#define CLOCK_SYSCLK_DIV 2
+#define CLOCK_SYSCLK_DIV 2U
 
 void SystemCoreClockSetup(void)
 {
@@ -101,9 +101,9 @@ void SystemCoreClockSetup(void)
  #endif  
  #if defined(CLOCK_ECATCLK_ENABLED)
   /* ECAT source clock */
-  XMC_SCU_CLOCK_SetECATClockSource(CLOCK_USBCLK_SEL);
+  XMC_SCU_CLOCK_SetECATClockSource(CLOCK_ECATCLK_SEL);
   /* ECAT divider setting */
-  XMC_SCU_CLOCK_SetECATClockDivider(CLOCK_USBCLK_DIV);
+  XMC_SCU_CLOCK_SetECATClockDivider(CLOCK_ECATCLK_DIV);
  #endif
  
  #if defined(CLOCK_WDTCLK_ENABLED)

@@ -1,6 +1,6 @@
 {
     "core": {
-        "version": "2.0.0.29660"
+        "version": "2.1.0.30537"
     },
     "opt": {
         "props": {
@@ -10,6 +10,9 @@
                 "bsp_gen4",
                 "can",
                 "cat3",
+                "ccu4",
+                "ccu4_capture",
+                "ccu8",
                 "dac",
                 "dma",
                 "ethernet",
@@ -19,6 +22,9 @@
                 "kit_xmc47_relax_v1",
                 "led",
                 "mcu_gp",
+                "memory",
+                "posif",
+                "qspi",
                 "rtc",
                 "sdhc",
                 "spi",
